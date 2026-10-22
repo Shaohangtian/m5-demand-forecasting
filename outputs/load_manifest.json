@@ -1,0 +1,21 @@
+{
+  "started": "2026-10-19 15:34:29",
+  "steps": {
+    "dim_date": {
+      "rows": 1969
+    },
+    "dims": {
+      "rows": 3059
+    },
+    "fact_sales": {
+      "rows": 59181090,
+      "units_sum": 66927173
+    },
+    "fact_price": {
+      "rows": 6841121,
+      "price_sum": 30175859.02
+    }
+  },
+  "elapsed_secs": 700.2,
+  "finished": "2026-10-19 15:46:10"
+}

@@ -1,0 +1,51 @@
+# ============================================================
+# 项目 .gitignore
+# 原则：代码 + 脚本 + 小结果文件进仓库；原始数据和导入中间件不进。
+# 原因：GitHub 单文件上限 100 MB，本项目的 data/ 和 outputs/_stage/ 合计约 2 GB。
+# ============================================================
+
+# ---------- 原始数据（429 MB，从 Kaggle 自行下载）----------
+data/
+
+# ---------- 导入用的中间分片（1.6 GB，可由脚本重新生成）----------
+#   重新生成命令：py src/01b_stage_for_workbench.py
+outputs/_stage/
+outputs/_tmp/
+
+# ---------- Python ----------
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+env/
+
+# ---------- 编辑器 / 系统 ----------
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ---------- 凭据：绝对不要提交 ----------
+.env
+.env.*
+*.pem
+*.key
+*_secret*
+
+# ---------- 日志 / 临时文件 ----------
+*.log
+*.bak
+~$*
+# ---------- 生成的中间数据（可重建，不进仓库）----------
+# sales_long.csv 有 128 MB，超过 GitHub 单文件 100 MB 上限，必须排除
+outputs/csv/sales_long.csv
+outputs/sim/preds_cache.npz
+
+# ---------- 临时调试脚本 ----------
+outputs/_diag*.py
+outputs/_verify_*.py
+
+# ---------- 测试用虚拟环境 ----------
+.venv*/

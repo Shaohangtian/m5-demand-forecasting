@@ -1,0 +1,7 @@
+check_id,check_name,failed_rows,status,detail
+1,主键唯一性,0,PASS,NULL
+2,行数完整性,0,PASS,NULL
+3,参照完整性,0,PASS,NULL
+4,取值合法性,0,PASS,NULL
+5,时序连续性,0,PASS,NULL
+6,分布异常,1437,WARN,最长连续零天数最大 = 1845
